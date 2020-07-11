@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Fight App</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script>
+      console.profile('load');
+  window.onload = function(e){
+      console.profileEnd('load');
+  }
+     </script>
+
+  </head>
+
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+            <div class="tempchange">
+                <h1 class="title tempchange">
+                    JavaScript Genie
+                    <span class="icon">
+                    <i class=""></i>
+                    </span>
+                  </h1>
+            </div>
+        </div>
+      </div>
+    </section>
+    <div class="column notification tutorial">
+      <h1 class=""></h1>
+      <p class=""></p>
+      <p class=""></p>
+
+
+
+        <div class="container">
+        <div class="columns">
+            <div class="column">
+            <div id="left-autocomplete"></div>
+            <div id="left-summary"></div>
+            </div>
+            <!-- <div class="column">
+            <div id="right-autocomplete"></div>
+            <div id="right-summary"></div>
+            </div> -->
+        </div>
+        <div class="column is-half notification is-primary tutorial">
+            <h1 class="title">...more text</h1>
+            <p class="subtitle">...even more text</p>
+        </div>
+        </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="./utils.js"></script>
+  <script src="./autocomplete.js"></script>
+  <script src="./index.js"></script>
+  </body>
+</html>
