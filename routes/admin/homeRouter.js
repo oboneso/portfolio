@@ -6,6 +6,7 @@ const successTemplate = require('../../views/admin/questionsuccess');
 const router = express.Router();
 // router.route('/').get(getHome);
 
-router.route('/').get(getAnswer);
-router.route('/').post(createAnswer);
+router.route('/answer').get(getAnswer);
+router.route('/answer').post(createAnswer);
+
 module.exports = router;
