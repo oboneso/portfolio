@@ -46,7 +46,7 @@ app.post('/', async (req, res) => {
 // that is sent from router Ex: /:id  api/v1/bootcamps/:id or  just /
 // app.use('/api/v1/questions', questions);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 const server = app.listen(
 	PORT,
