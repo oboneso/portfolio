@@ -29,6 +29,9 @@ const Answer = require('./models/Answer'); // import questionSchema
 // GET and POST routes ---------------------------------------------------------
 app.use(homeRouter);
 
+app.get('/', (req, res) => {
+	res.send('This is the home page');
+});
 app.post('/', async (req, res) => {
 	const answer = await Answer.create(req.body);
 	res.status(201).json({
