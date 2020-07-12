@@ -1,25 +1,21 @@
 const answerTemplate = require('../views/admin/answer');
 const successTemplate = require('../views/admin/questionsuccess');
+const signinTemplate = require('../views/admin/signin');
 const Question = require('../models/Question');
 const Answer = require('../models/Answer');
+const ErrorResponse = require('../utils/errorResponse');
+const asyncHandler = require('../middleware/async');
 
-// @desc        Get answer page
+// @desc        Get home page
 // @route       GET /
 // @access      Public
-exports.getAnswer = async (req, res, next) => {
+exports.getHome = asyncHandler(async (req, res, next) => {
 	try {
-		const answers = await Answer.find();
-
-		res.send(answerTemplate({ req }));
-		// res.status(200).render(homeTemplate({ req }));
-		// json({ success: true, count: questions.length, data: questions });
-
-		//res.status(200).json({ success: true, data: question });
+		res.send(signinTemplate);
 	} catch (err) {
 		next(err);
 	}
-};
-
+});
 // @desc        Create new answer
 // @route       POST /
 // @access      Public
@@ -37,15 +33,7 @@ exports.createAnswer = async (req, res, next) => {
 	}
 };
 
-// // @desc        Create new question
-// // @route       POST
+// // @desc        Home page
+// // @route       GET /signin
 // // @access      Public
-// exports.createQuestion = async (req, res, next) => {
-// 	try {
-// 		const question = req.body;
-// 		await Question.create(question);
-// 		res.redirect('/');
-// 	} catch (err) {
-// 		next(err);
-// 	}
-// };
+// exports.getHome = async (req, res, next) => {};

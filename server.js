@@ -29,13 +29,13 @@ const Answer = require('./models/Answer'); // import questionSchema
 // GET and POST routes ---------------------------------------------------------
 app.use(homeRouter);
 
-app.post('/', async (req, res) => {
-	const answer = await Answer.create(req.body);
-	res.status(201).json({
-		success: true,
-		data: answer
-	});
-});
+// app.post('/', async (req, res) => {
+// 	const answer = await Answer.create(req.body);
+// 	res.status(201).json({
+// 		success: true,
+// 		data: answer
+// 	});
+// });
 //-----------------------------------------------------------------------------
 
 // mount router (path, route file) * path is used to complete the pathnames in bootcamps.js
